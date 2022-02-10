@@ -1,0 +1,8 @@
+library("ggplot2")
+library("tidyverse")
+
+ggplot(eSportsData, aes(x = Number.of.Players..Millions.), stat = "bin") + 
+  geom_histogram(binwidth = 6.5, color="blue", fill="white") +
+  geom_density(alpha=1, fill="#FF6666") + 
+  labs(title="Counts of Number of Players of Selected eSports Games Worldwide as of August 2017",
+       x ="Number of Players(Millions)", y = "Count")
